@@ -61,6 +61,10 @@ RUN apt-get update \
 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
 	&& rm -rf /var/lib/apt/lists/*
 
+RUN install2.r --error \
+    --deps TRUE \
+    devtools
+
 RUN installGithub.r omegahat/Rcompression
 
 RUN install2.r --error \
