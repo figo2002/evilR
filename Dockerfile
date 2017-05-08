@@ -59,11 +59,13 @@ RUN apt-get update \
 	&& ln -s /usr/share/doc/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r \
 	&& install.r docopt \
 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
-	&& rm -rf /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt/lists/* \
+        && RUN R -e "source('https://bioconductor.org/biocLite.R')"
 
 RUN install2.r --error \
     --deps TRUE \
-    devtools
+    devtools \
+    remotes
 
 RUN installGithub.r omegahat/Rcompression
 
