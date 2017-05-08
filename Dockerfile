@@ -57,7 +57,9 @@ RUN apt-get update \
 	&& install.r docopt \
 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
 	&& rm -rf /var/lib/apt/lists/*
-	
+
+RUN Rscript -e "install.packages("Rcompression", repos = "http://www.omegahat.org/R")"
+
 RUN install2.r --error \
     --deps TRUE \
     RCurl \
