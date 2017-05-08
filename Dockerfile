@@ -22,6 +22,9 @@ RUN apt-get update \
 		wget \
 		ca-certificates \
 		fonts-texgyre \
+		libbz2-dev \
+		zlibc \
+		bzip2 \
 	&& rm -rf /var/lib/apt/lists/*
 
 ## Configure default locale, see https://github.com/rocker-org/rocker/issues/19
@@ -58,7 +61,7 @@ RUN apt-get update \
 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN Rscript -e "install.packages("Rcompression", repos = "http://www.omegahat.org/R")"
+RUN installGithub.r omegahat/Rcompression
 
 RUN install2.r --error \
     --deps TRUE \
