@@ -28,6 +28,7 @@ RUN apt-get update \
                 libssl-dev \
                 libcurl4-openssl-dev  \
 		bzip2 \
+		libv8-3.14-dev \
 	&& rm -rf /var/lib/apt/lists/*
 
 ## Configure default locale, see https://github.com/rocker-org/rocker/issues/19
