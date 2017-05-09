@@ -23,7 +23,10 @@ RUN apt-get update \
 		ca-certificates \
 		fonts-texgyre \
 		libbz2-dev \
+                libxml2-dev \
 		zlibc \
+                libssl-dev \
+                libcurl4-openssl-dev  \
 		bzip2 \
 	&& rm -rf /var/lib/apt/lists/*
 
