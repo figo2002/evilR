@@ -78,6 +78,7 @@ RUN install2.r --error \
     RCurl \
     XML \
     rex \
+    V8 \
     stringi \
     stringr
 
