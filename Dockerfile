@@ -17,6 +17,7 @@ RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		ed \
 		less \
+		nano \
 		locales \
 		vim-tiny \
 		wget \
