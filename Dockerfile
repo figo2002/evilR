@@ -81,6 +81,7 @@ RUN installGithub.r omegahat/Rcompression
 RUN install2.r --error \
     --deps TRUE \
     RCurl \
+    httr \
     XML \
     rex \
     V8 \
