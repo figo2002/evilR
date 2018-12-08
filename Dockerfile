@@ -1,6 +1,6 @@
 ## Emacs, make this -*- mode: sh; -*-
  
-FROM debian:testing
+FROM debian:stable
 
 ## This handle reaches Carl and Dirk
 MAINTAINER "Carl Boettiger and Dirk Eddelbuettel" rocker-maintainers@eddelbuettel.com
